@@ -1,0 +1,24 @@
+<ion-header>
+
+  <game-header [levelNum]="levelNum"></game-header>
+
+</ion-header>
+
+
+<ion-content>
+  <div text-center>
+    <game-timer [(time)]="levelTime"></game-timer>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-1>
+
+      </ion-col>
+      <ion-col col-10>
+        <flip-board [shapes]="shapes" [dynamicMode]="levelDynamicMode" [gridClass]="gridClass"></flip-board>
+      </ion-col>
+      <ion-col col-1></ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

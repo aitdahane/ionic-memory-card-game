@@ -1,0 +1,25 @@
+<ion-header>
+  <h1 text-center>Flippy Square</h1>
+</ion-header>
+
+<ion-content padding>
+
+  <ng-container *ngFor="let level of levelsOpen">
+
+    <button audio-button (click)="onSelectLevel(level.num)">
+      Level {{level.num}}
+      <img *ngIf="level.isComplete" src="./assets/img/small-star.png"  />
+    </button>
+
+  </ng-container>
+
+  <ng-container *ngFor="let level of levelsLocked">
+
+    <button class="button-locked">
+        Level {{level.num}}      
+      <img src="./assets/img/lock.png" />
+    </button>
+
+  </ng-container>
+  
+</ion-content>

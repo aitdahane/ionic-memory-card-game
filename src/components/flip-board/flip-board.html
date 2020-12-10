@@ -1,0 +1,7 @@
+<div [class]="gridClass">
+    <flip-card *ngFor="let shape of shapes; let index = index; trackBy: trackByNum" [shape]="shape" [(isFlipped)]="areFlipped[index]"
+        (flip)="onFlipCard(index)" [@visible]="(index == indexFirstSwap || index == indexSecondSwap) ? 'true' : 'false'" 
+        (@visible.done)="onDoneSwap()">
+
+    </flip-card>
+</div>

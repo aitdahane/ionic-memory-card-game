@@ -1,0 +1,7 @@
+{
+  "name": "flip-card",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -1,0 +1,12 @@
+<div class="flip-card" (click)="onFlip()">
+  <div class="flip-card-inner"
+   [@frontBack]="isFlipped ? 'back':'front'"
+   (@frontBack.done)="onDoneFlip()">
+      <div class="flip-card-front">
+        <img src="./assets/img/flip-card-front.png" />
+      </div>
+      <div class="flip-card-back">
+        <img src="./assets/img/shapes/{{shape?.src}}" />
+      </div>
+  </div>
+</div>

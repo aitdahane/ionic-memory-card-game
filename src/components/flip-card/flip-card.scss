@@ -1,0 +1,50 @@
+flip-card {
+    .flip-card {
+        width: 100%;
+        height: 100%;
+        border: 1px solid white;
+        perspective: 1000px; 
+      }
+      
+      // /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transform-style: preserve-3d;
+      }
+      
+      // /* Position the front and back side */
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+      
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        border-radius: 5px;
+        > * {
+          background-color: black;
+          color: aqua;
+          border-radius: 5px;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    
+      /* Style the back side */
+      .flip-card-back {
+        background-color: black;
+        color: aqua;
+        transform: rotateY(180deg);
+        border-radius: 5px;
+        > * {
+          width: 50%;
+          height: 50%;
+          margin-top: 25%;
+        }
+      } 
+}

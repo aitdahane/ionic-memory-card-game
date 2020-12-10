@@ -1,0 +1,25 @@
+<ion-content>
+  <ion-grid vertical-center>
+    <ion-row>
+      <ion-col text-center>
+        <ng-container *ngIf="endMode == 0">
+          <img src="./assets/img/big-star.png" />
+          <h1 *ngIf="endMode == 0">Great!</h1>
+        </ng-container>
+        <h1 *ngIf="endMode == 1">Time's up</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <button flip-button audio-button (click)="onNext()" *ngIf="endMode == 0">Next Level</button>
+        <button flip-button audio-button (click)="onRetry()" *ngIf="endMode == 1">Retry</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col text-center>
+        <button flip-button audio-button (click)="onCancel()">Cancel</button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
